@@ -35,25 +35,25 @@
     <ClCompile Include="..\source\uidescription test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugin-bindings\vst3editor.cpp">
-      <Filter>Source Files\VSTGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\vstgui_uidescription_win32.cpp">
-      <Filter>Source Files\VSTGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\vstgui_win32.cpp">
-      <Filter>Source Files\VSTGUI</Filter>
-    </ClCompile>
     <ClCompile Include="..\source\vst3sdksources.cpp">
       <Filter>Source Files\VST3 SDK</Filter>
     </ClCompile>
     <ClCompile Include="..\source\zoomtest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugin-bindings\vst3groupcontroller.cpp">
-      <Filter>Source Files\VSTGUI</Filter>
-    </ClCompile>
     <ClCompile Include="..\source\edituidescriptioneditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3groupcontroller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\vstgui_uidescription_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\vstgui_win32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -73,18 +73,14 @@
     <ClInclude Include="..\source\uidescription test.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugin-bindings\vst3editor.h">
-      <Filter>Source Files\VSTGUI</Filter>
-    </ClInclude>
     <ClInclude Include="..\source\zoomtest.h">
       <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\plugin-bindings\vst3groupcontroller.h">
-      <Filter>Source Files\VSTGUI</Filter>
     </ClInclude>
     <ClInclude Include="..\source\edituidescriptioneditor.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3groupcontroller.h" />
+    <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3editor.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="uidescription test.rc">

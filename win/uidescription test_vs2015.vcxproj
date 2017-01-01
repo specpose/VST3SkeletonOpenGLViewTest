@@ -91,7 +91,7 @@
     <ClCompile>
       <AdditionalOptions>/MP /Zc:inline %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../../../;../../../../../VST3SDK/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../VST3 SDK;../../VST3 SDK/vstgui4;../../../../../VST3SDK/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;VSTGUI_LIVE_EDITING=1;DEVELOPMENT=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -113,7 +113,7 @@
     <ClCompile>
       <AdditionalOptions>/MP /Zc:inline %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../../../;../../../../../VST3SDK/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../VST3 SDK;../../VST3 SDK/vstgui4;../../../../../VST3SDK/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;VSTGUI_LIVE_EDITING=1;DEBUG;DEVELOPMENT=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -134,7 +134,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>../../../../;../../../../../../VST3 SDK/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../VST3 SDK;../../VST3 SDK/vstgui4;../../../../../../VST3 SDK/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -158,7 +158,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>../../../../;../../../../../../VST3 SDK/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../VST3 SDK;../../VST3 SDK/vstgui4;../../../../../../VST3 SDK/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -178,7 +178,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\plugin-bindings\vst3groupcontroller.cpp" />
+    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3groupcontroller.cpp" />
     <ClCompile Include="..\source\animationtest.cpp" />
     <ClCompile Include="..\source\edituidescriptioneditor.cpp" />
     <ClCompile Include="..\source\factory.cpp" />
@@ -186,21 +186,21 @@
     <ClCompile Include="..\source\openglviewtest.cpp" />
     <ClCompile Include="..\source\subcontrollertest.cpp" />
     <ClCompile Include="..\source\uidescription test.cpp" />
-    <ClCompile Include="..\..\..\plugin-bindings\vst3editor.cpp" />
-    <ClCompile Include="..\..\..\vstgui_uidescription_win32.cpp" />
-    <ClCompile Include="..\..\..\vstgui_win32.cpp" />
+    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3editor.cpp" />
+    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\vstgui_uidescription_win32.cpp" />
+    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\vstgui_win32.cpp" />
     <ClCompile Include="..\source\vst3sdksources.cpp" />
     <ClCompile Include="..\source\zoomtest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\plugin-bindings\vst3groupcontroller.h" />
+    <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3groupcontroller.h" />
     <ClInclude Include="..\source\animationtest.h" />
     <ClInclude Include="..\source\edituidescriptioneditor.h" />
     <ClInclude Include="..\source\graphicstest.h" />
     <ClInclude Include="..\source\openglviewtest.h" />
     <ClInclude Include="..\source\subcontrollertest.h" />
     <ClInclude Include="..\source\uidescription test.h" />
-    <ClInclude Include="..\..\..\plugin-bindings\vst3editor.h" />
+    <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3editor.h" />
     <ClInclude Include="..\source\zoomtest.h" />
   </ItemGroup>
   <ItemGroup>
