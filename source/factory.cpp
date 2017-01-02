@@ -33,7 +33,8 @@
 //-----------------------------------------------------------------------------
 
 #include "public.sdk/source/vst/vst2wrapper/vst2wrapper.h"
-#include "openglviewtest.h"
+#include "ProcessorIF.h"
+#include "ControllerBase.h"
 #include "public.sdk/source/main/pluginfactoryvst3.h"
 
 using namespace VSTGUI;
@@ -43,7 +44,7 @@ using namespace VSTGUI;
 //------------------------------------------------------------------------
 BEGIN_FACTORY("VSTGUI", "", "", PFactoryInfo::kUnicode)
 
-	DEF_CLASS2 (INLINE_UID_FROM_FUID(OpenGLViewTestProcessor::cid),
+	DEF_CLASS2 (INLINE_UID_FROM_FUID(ProcessorIF::cid),
 				PClassInfo::kManyInstances,
 				kVstAudioEffectClass,
 				"VSTGUI UIDescription OpenGLView Test",
@@ -51,9 +52,9 @@ BEGIN_FACTORY("VSTGUI", "", "", PFactoryInfo::kUnicode)
 				"Fx",
 				"1.0.0",
 				kVstVersionString,
-				OpenGLViewTestProcessor::createInstance)
+				ProcessorIF::createInstance)
 				
-	DEF_CLASS2 (INLINE_UID_FROM_FUID(OpenGLViewTestController::cid),
+	DEF_CLASS2 (INLINE_UID_FROM_FUID(ControllerBase::cid),
 				PClassInfo::kManyInstances,
 				kVstComponentControllerClass,
 				"VSTGUI UIDescription OpenGLView Test",
@@ -61,7 +62,7 @@ BEGIN_FACTORY("VSTGUI", "", "", PFactoryInfo::kUnicode)
 				"Fx",
 				"1.0.0",
 				kVstVersionString,
-				OpenGLViewTestController::createInstance)
+				ControllerBase::createInstance)
 
 END_FACTORY
 
@@ -80,5 +81,5 @@ bool DeinitModule ()
 //------------------------------------------------------------------------
 ::AudioEffect* createEffectInstance (::audioMasterCallback audioMaster)
 {
-	return Steinberg::Vst::Vst2Wrapper::create (GetPluginFactory (), UIDescriptionTestProcessor::cid, 0, audioMaster);
+	return Steinberg::Vst::Vst2Wrapper::create (GetPluginFactory (), ProcessorIF::cid, 0, audioMaster);
 }
