@@ -178,7 +178,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3groupcontroller.cpp" />
     <ClCompile Include="..\source\ControllerBase.cpp" />
     <ClCompile Include="..\source\ControllerGL.cpp" />
     <ClCompile Include="..\source\ControllerIF.cpp" />
@@ -187,16 +186,13 @@
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\vstgui_uidescription_win32.cpp" />
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\vstgui_win32.cpp" />
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\vst3sdksources.cpp" />
-    <ClCompile Include="..\source\ProcessorGL.cpp" />
     <ClCompile Include="..\source\ProcessorIF.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3groupcontroller.h" />
     <ClInclude Include="..\source\ControllerBase.h" />
     <ClInclude Include="..\source\ControllerGL.h" />
     <ClInclude Include="..\source\ControllerIF.h" />
     <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3editor.h" />
-    <ClInclude Include="..\source\ProcessorGL.h" />
     <ClInclude Include="..\source\ProcessorIF.h" />
     <ClInclude Include="..\source\SubControllerGL.h" />
     <ClInclude Include="..\source\ViewGLIF.h" />
