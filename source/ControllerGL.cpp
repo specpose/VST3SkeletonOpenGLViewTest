@@ -5,6 +5,10 @@ Steinberg::FUID ControllerGL::cid(0xC66B5286, 0x2E334055, 0xB42A6288, 0x9BE0DCE7
 using namespace Steinberg;
 using namespace Steinberg::Vst;
 
+ControllerGL::ControllerGL() : ControllerBase()
+{
+}
+
 //------------------------------------------------------------------------
 //------------------------------------------------------------------------
 //------------------------------------------------------------------------

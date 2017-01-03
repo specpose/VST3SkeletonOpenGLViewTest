@@ -8,14 +8,14 @@ class ControllerBase : public ControllerIF
 {
 public:
 	ControllerBase();
+	virtual ~ControllerBase() {};
 
-	Steinberg::tresult PLUGIN_API initialize(Steinberg::FUnknown* context) override;
-	Steinberg::IPlugView* PLUGIN_API createView(Steinberg::FIDString name) override;
-	void willClose(VST3Editor* editor) override;
+	virtual Steinberg::tresult PLUGIN_API initialize(Steinberg::FUnknown* context) override;
+	virtual Steinberg::IPlugView* PLUGIN_API createView(Steinberg::FIDString name)=0;
+	virtual void willClose(VST3Editor* editor) =0;
 
-	CView* createCustomView(UTF8StringPtr name, const UIAttributes& attributes, const IUIDescription* description, VST3Editor* editor) override;
-	CView* verifyView(CView* view, const UIAttributes& attributes, const IUIDescription* description, VST3Editor* editor) override;
+	template<typename T> static FUnknown* createInstance(void* context) {
+		return (Steinberg::Vst::IEditController*)new T;
+	};
 
-	static Steinberg::FUnknown* createInstance(void*) { return (Steinberg::Vst::IEditController*)new ControllerBase; }
-	static Steinberg::FUID cid;
 };

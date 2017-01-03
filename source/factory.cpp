@@ -34,7 +34,6 @@
 
 #include "public.sdk/source/vst/vst2wrapper/vst2wrapper.h"
 #include "ProcessorIF.h"
-//#include "ControllerBase.h"
 #include "ControllerGL.h"
 #include "public.sdk/source/main/pluginfactoryvst3.h"
 
@@ -55,7 +54,7 @@ BEGIN_FACTORY("VSTGUI", "", "", PFactoryInfo::kUnicode)
 				kVstVersionString,
 				ProcessorIF::createInstance)
 				
-	DEF_CLASS2 (INLINE_UID_FROM_FUID(ControllerBase::cid),
+	DEF_CLASS2 (INLINE_UID_FROM_FUID(ControllerGL::cid),
 				PClassInfo::kManyInstances,
 				kVstComponentControllerClass,
 				"VSTGUI UIDescription OpenGLView Test",
@@ -63,7 +62,7 @@ BEGIN_FACTORY("VSTGUI", "", "", PFactoryInfo::kUnicode)
 				"Fx",
 				"1.0.0",
 				kVstVersionString,
-				ControllerGL::createInstance)
+				ControllerGL::createInstance<ControllerGL>)
 
 END_FACTORY
 

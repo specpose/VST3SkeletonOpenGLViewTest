@@ -1,7 +1,7 @@
 #pragma once
 
 #include "public.sdk/source/vst/vstaudioeffect.h"
-#include "ControllerBase.h"
+#include "ControllerGL.h"
 #include "pluginterfaces/base/ustring.h"
 
 

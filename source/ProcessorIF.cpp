@@ -10,7 +10,7 @@ FUID ProcessorIF::cid(0x49BAF003, 0xB44D455E, 0x9CBDE54F, 0x7FF2CBA1);
 //------------------------------------------------------------------------
 ProcessorIF::ProcessorIF()
 {
-	setControllerClass(ControllerBase::cid);
+	setControllerClass(ControllerGL::cid);
 }
 
 //------------------------------------------------------------------------
