@@ -182,6 +182,7 @@
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\animationtest.cpp" />
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\edituidescriptioneditor.cpp" />
     <ClCompile Include="..\source\ControllerBase.cpp" />
+    <ClCompile Include="..\source\ControllerGL.cpp" />
     <ClCompile Include="..\source\ControllerIF.cpp" />
     <ClCompile Include="..\source\factory.cpp" />
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\graphicstest.cpp" />
@@ -193,6 +194,7 @@
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\vstgui_win32.cpp" />
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\vst3sdksources.cpp" />
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\zoomtest.cpp" />
+    <ClCompile Include="..\source\ProcessorGL.cpp" />
     <ClCompile Include="..\source\ProcessorIF.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -201,13 +203,17 @@
     <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\edituidescriptioneditor.h" />
     <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\graphicstest.h" />
     <ClInclude Include="..\source\ControllerBase.h" />
+    <ClInclude Include="..\source\ControllerGL.h" />
     <ClInclude Include="..\source\ControllerIF.h" />
     <ClInclude Include="..\source\openglviewtest.h" />
     <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\subcontrollertest.h" />
     <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\uidescription test.h" />
     <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3editor.h" />
     <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\zoomtest.h" />
+    <ClInclude Include="..\source\ProcessorGL.h" />
     <ClInclude Include="..\source\ProcessorIF.h" />
+    <ClInclude Include="..\source\SubControllerGL.h" />
+    <ClInclude Include="..\source\ViewGLIF.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="uidescription test.rc" />

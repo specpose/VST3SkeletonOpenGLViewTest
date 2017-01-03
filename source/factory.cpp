@@ -34,7 +34,8 @@
 
 #include "public.sdk/source/vst/vst2wrapper/vst2wrapper.h"
 #include "ProcessorIF.h"
-#include "ControllerBase.h"
+//#include "ControllerBase.h"
+#include "ControllerGL.h"
 #include "public.sdk/source/main/pluginfactoryvst3.h"
 
 using namespace VSTGUI;
@@ -62,7 +63,7 @@ BEGIN_FACTORY("VSTGUI", "", "", PFactoryInfo::kUnicode)
 				"Fx",
 				"1.0.0",
 				kVstVersionString,
-				ControllerBase::createInstance)
+				ControllerGL::createInstance)
 
 END_FACTORY
 
