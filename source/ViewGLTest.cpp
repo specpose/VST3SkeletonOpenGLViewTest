@@ -1,6 +1,6 @@
 #include "ViewGLTest.h"
 
-ViewGLTest::ViewGLTest(const CRect & size) : ViewGLIF(size)
+ViewGLTest::ViewGLTest(const CRect & size) : ViewGLBase(size)
 {
 }
 
@@ -15,10 +15,7 @@ void ViewGLTest::setThreaded(bool state)
 		}
 		else if (state == false)
 		{
-			if (thread) {
-				delete thread;
-				thread = 0;
-			}
+			killThread();
 			remember();
 			addAnimation("XRotation", this, new Animation::RepeatTimingFunction(new Animation::LinearTimingFunction(4000), -1, false));
 			remember();
@@ -32,10 +29,7 @@ void ViewGLTest::setThreaded(bool state)
 
 void ViewGLTest::platformOpenGLViewWillDestroy()
 {
-	if (thread) {
-		delete thread;
-		thread = 0;
-	}
+	killThread();
 	removeAllAnimations();
 }
 

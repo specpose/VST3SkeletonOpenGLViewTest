@@ -188,6 +188,7 @@
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\vst3sdksources.cpp" />
     <ClCompile Include="..\source\ProcessorIF.cpp" />
     <ClCompile Include="..\source\SubControllerGL.cpp" />
+    <ClCompile Include="..\source\ViewGLBase.cpp" />
     <ClCompile Include="..\source\ViewGLIF.cpp" />
     <ClCompile Include="..\source\ViewGLIFThread.cpp" />
     <ClCompile Include="..\source\ViewGLTest.cpp" />
@@ -199,6 +200,7 @@
     <ClInclude Include="..\..\VST3 SDK\vstgui4\vstgui\plugin-bindings\vst3editor.h" />
     <ClInclude Include="..\source\ProcessorIF.h" />
     <ClInclude Include="..\source\SubControllerGL.h" />
+    <ClInclude Include="..\source\ViewGLBase.h" />
     <ClInclude Include="..\source\ViewGLIF.h" />
     <ClInclude Include="..\source\ViewGLIFThread.h" />
     <ClInclude Include="..\source\ViewGLTest.h" />

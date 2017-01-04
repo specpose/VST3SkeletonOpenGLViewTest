@@ -1,8 +1,8 @@
 #pragma once
 
-#include "ViewGLIF.h"
+#include "ViewGLBase.h"
 
-class ViewGLTest : public ViewGLIF, public Animation::IAnimationTarget
+class ViewGLTest : public ViewGLBase, public Animation::IAnimationTarget
 {
 public:
 	ViewGLTest(const CRect & size);

@@ -2,27 +2,8 @@
 
 #include "ViewGLIFThread.h"
 
-ViewGLIF::ViewGLIF(const CRect & size) : COpenGLView(size), useThread(false), thread(0)
+ViewGLIF::ViewGLIF(const CRect & size) : COpenGLView(size), useThread(false)
 {
-}
-
-void ViewGLIF::setThreaded(bool state)
-{
-	if (isAttached())
-	{
-		if (state == true && thread == 0)
-		{
-			thread = new ViewGLIFThread<ViewGLIF>(this);
-		}
-		else if (state == false)
-		{
-			if (thread) {
-				delete thread;
-				thread = 0;
-			}
-		}
-	}
-	useThread = state;
 }
 
 void ViewGLIF::platformOpenGLViewCreated()
@@ -43,10 +24,7 @@ void ViewGLIF::platformOpenGLViewCreated()
 
 void ViewGLIF::platformOpenGLViewWillDestroy()
 {
-	if (thread) {
-		delete thread;
-		thread = 0;
-	}
+	killThread();
 }
 
 void ViewGLIF::platformOpenGLViewSizeChanged()

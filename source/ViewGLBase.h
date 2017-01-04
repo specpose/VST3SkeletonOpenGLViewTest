@@ -15,6 +15,7 @@
 #include "vstgui4/vstgui/lib/animation/ianimationtarget.h"
 #include "vstgui4/vstgui/lib/animation/timingfunctions.h"
 
+#include "ViewGLIF.h"
 #include "ViewGLIFThread.h"
 
 using namespace VSTGUI;
@@ -23,26 +24,17 @@ using namespace Steinberg;
 //------------------------------------------------------------------------
 //------------------------------------------------------------------------
 //------------------------------------------------------------------------
-class ViewGLIF : public COpenGLView
+class ViewGLBase : public ViewGLIF
 {
 public:
-	ViewGLIF(const CRect& size);
+	ViewGLBase(const CRect& size);
 
-	virtual void killThread() = 0;
+	void killThread();
 
-	virtual void setThreaded(bool state) = 0;
-
-	void platformOpenGLViewCreated() override;
-
-	void platformOpenGLViewWillDestroy() override;
-
-	void platformOpenGLViewSizeChanged() override;
-
-	virtual void drawOpenGLThreaded();
+	void setThreaded(bool state);
 
 	virtual void drawOpenGL(const CRect& updateRect)=0;
 
-	PixelFormat* getPixelFormat() override;
 protected:
-	bool useThread;
+	ViewGLIFThread<ViewGLIF>* thread;
 };
