@@ -198,6 +198,7 @@
     <ClInclude Include="..\source\ProcessorIF.h" />
     <ClInclude Include="..\source\SubControllerGL.h" />
     <ClInclude Include="..\source\ViewGLIF.h" />
+    <ClInclude Include="..\source\ViewGLIFThread.h" />
     <ClInclude Include="..\source\ViewGLTest.h" />
   </ItemGroup>
   <ItemGroup>

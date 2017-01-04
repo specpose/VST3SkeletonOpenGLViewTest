@@ -12,7 +12,7 @@ void ViewGLIF::setThreaded(bool state)
 	{
 		if (state == true && thread == 0)
 		{
-			thread = new Thread(this);
+			thread = new ViewGLIFThread<ViewGLIF>(this);
 		}
 		else if (state == false)
 		{

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "base/source/fobject.h"
-#include "base/source/fthread.h"
 
 #if MAC
 #include <OpenGL/gl.h>
@@ -15,6 +14,8 @@
 #include "vstgui4/vstgui/lib/copenglview.h"
 #include "vstgui4/vstgui/lib/animation/ianimationtarget.h"
 #include "vstgui4/vstgui/lib/animation/timingfunctions.h"
+
+#include "ViewGLIFThread.h"
 
 using namespace VSTGUI;
 using namespace Steinberg;
@@ -41,38 +42,6 @@ public:
 
 	PixelFormat* getPixelFormat() override;
 protected:
-
-	class Thread : public FThread
-	{
-	public:
-		Thread(ViewGLIF* openGLView)
-			: FThread("OpenGLDrawThread")
-			, openGLView(openGLView)
-			, cancelDrawLoop(false)
-		{
-			this->run();
-		}
-		~Thread() {
-			cancelDrawLoop = true;
-			this->waitDead(-1);
-		}
-
-		uint32 entry() override
-		{
-			while (cancelDrawLoop == false)
-			{
-				openGLView->drawOpenGLThreaded();
-				FThreadSleep(16);
-			}
-			return 0;
-		}
-
-	protected:
-		ViewGLIF* openGLView;
-		volatile bool cancelDrawLoop;
-	};
-
-	
 	bool useThread;
-	Thread* thread;
+	ViewGLIFThread<ViewGLIF>* thread;
 };
