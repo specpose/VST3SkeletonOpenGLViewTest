@@ -187,7 +187,9 @@
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\vstgui_win32.cpp" />
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\vst3sdksources.cpp" />
     <ClCompile Include="..\source\ProcessorIF.cpp" />
+    <ClCompile Include="..\source\SubControllerGL.cpp" />
     <ClCompile Include="..\source\ViewGLIF.cpp" />
+    <ClCompile Include="..\source\ViewGLIFThread.cpp" />
     <ClCompile Include="..\source\ViewGLTest.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,7 @@
 
 #include "vstgui/uidescription/delegationcontroller.h"
 #include "vstgui/uidescription/uiattributes.h"
+#include "vstgui/lib/controls/ccontrol.h"
 #include "ViewGLTest.h"
 
 //------------------------------------------------------------------------
@@ -10,34 +11,13 @@
 class SubControllerGL : public DelegationController
 {
 public:
-	SubControllerGL(IController* baseController)
-		: DelegationController(baseController)
-		, openGLView(0)
-	{}
+	SubControllerGL(IController* baseController);
 
-	IControlListener* getControlListener(UTF8StringPtr name) override
-	{
-		if (strcmp(name, "threaded") == 0)
-			return this;
-		return controller->getControlListener(name);
-	}
+	IControlListener* getControlListener(UTF8StringPtr name) override;
 
-	CView* createView(const UIAttributes& attributes, const IUIDescription* description) override
-	{
-		const std::string* name = attributes.getAttributeValue("custom-view-name");
-		if (name && *name == "OpenGLView")
-		{
-			openGLView = new ViewGLTest(CRect(0, 0, 0, 0));
-			return openGLView;
-		}
-		return controller->createView(attributes, description);
-	}
+	CView* createView(const UIAttributes& attributes, const IUIDescription* description) override;
 
-	void valueChanged(CControl* control) override
-	{
-		if (openGLView)
-			openGLView->setThreaded(control->getValue() == control->getMax());
-	}
+	void valueChanged(CControl* control) override;
 
 protected:
 	ViewGLTest* openGLView;
