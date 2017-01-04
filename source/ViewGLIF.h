@@ -28,8 +28,6 @@ class ViewGLIF : public COpenGLView
 public:
 	ViewGLIF(const CRect& size);
 
-	virtual void killThread() = 0;
-
 	virtual void setThreaded(bool state) = 0;
 
 	void platformOpenGLViewCreated() override;
@@ -44,5 +42,7 @@ public:
 
 	PixelFormat* getPixelFormat() override;
 protected:
+	virtual void killThread() = 0;
+
 	bool useThread;
 };

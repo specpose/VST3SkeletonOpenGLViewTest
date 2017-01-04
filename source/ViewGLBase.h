@@ -29,12 +29,12 @@ class ViewGLBase : public ViewGLIF
 public:
 	ViewGLBase(const CRect& size);
 
-	void killThread();
-
 	void setThreaded(bool state);
 
 	virtual void drawOpenGL(const CRect& updateRect)=0;
 
 protected:
+	void killThread();
+
 	ViewGLIFThread<ViewGLIF>* thread;
 };
