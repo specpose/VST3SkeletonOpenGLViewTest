@@ -2,7 +2,7 @@
 
 #include "vstgui/uidescription/delegationcontroller.h"
 #include "vstgui/uidescription/uiattributes.h"
-#include "ViewGLIF.h"
+#include "ViewGLTest.h"
 
 //------------------------------------------------------------------------
 //------------------------------------------------------------------------
@@ -27,7 +27,7 @@ public:
 		const std::string* name = attributes.getAttributeValue("custom-view-name");
 		if (name && *name == "OpenGLView")
 		{
-			openGLView = new ViewGLIF(CRect(0, 0, 0, 0));
+			openGLView = new ViewGLTest(CRect(0, 0, 0, 0));
 			return openGLView;
 		}
 		return controller->createView(attributes, description);
@@ -40,5 +40,5 @@ public:
 	}
 
 protected:
-	ViewGLIF* openGLView;
+	ViewGLTest* openGLView;
 };

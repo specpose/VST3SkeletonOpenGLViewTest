@@ -188,6 +188,7 @@
     <ClCompile Include="..\..\VST3 SDK\vstgui4\vstgui\tests\uidescription vst3\source\vst3sdksources.cpp" />
     <ClCompile Include="..\source\ProcessorIF.cpp" />
     <ClCompile Include="..\source\ViewGLIF.cpp" />
+    <ClCompile Include="..\source\ViewGLTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\source\ControllerBase.h" />
@@ -197,6 +198,7 @@
     <ClInclude Include="..\source\ProcessorIF.h" />
     <ClInclude Include="..\source\SubControllerGL.h" />
     <ClInclude Include="..\source\ViewGLIF.h" />
+    <ClInclude Include="..\source\ViewGLTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="uidescription test.rc" />
