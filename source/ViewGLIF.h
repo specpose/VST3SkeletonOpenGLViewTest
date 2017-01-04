@@ -15,8 +15,6 @@
 #include "vstgui4/vstgui/lib/animation/ianimationtarget.h"
 #include "vstgui4/vstgui/lib/animation/timingfunctions.h"
 
-#include "ViewGLIFThread.h"
-
 using namespace VSTGUI;
 using namespace Steinberg;
 

@@ -1,18 +1,19 @@
 #pragma once
 
 #include "base/source/fthread.h"
+#include "ViewGLIF.h"
 
 using namespace Steinberg;
 
-template<typename T> class ViewGLIFThread : public FThread
+class ViewGLIFThread : public FThread
 {
 public:
-	ViewGLIFThread(T* openGLView);
+	ViewGLIFThread(ViewGLIF* openGLView);
 	~ViewGLIFThread();
 
 	uint32 entry() override;
 
 protected:
-	T* viewglif;
+	ViewGLIF* viewglif;
 	volatile bool cancelDrawLoop;
 };

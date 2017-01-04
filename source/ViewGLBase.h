@@ -36,5 +36,5 @@ public:
 protected:
 	void killThread();
 
-	ViewGLIFThread<ViewGLIF>* thread;
+	ViewGLIFThread* thread;
 };

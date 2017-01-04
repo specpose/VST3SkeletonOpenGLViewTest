@@ -13,7 +13,7 @@ void ViewGLBase::setThreaded(bool state)
 	{
 		if (state == true && thread == 0)
 		{
-			thread = new ViewGLIFThread<ViewGLIF>(this);
+			thread = new ViewGLIFThread(this);
 		}
 		else if (state == false)
 		{

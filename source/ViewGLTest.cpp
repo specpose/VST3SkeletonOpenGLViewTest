@@ -11,7 +11,7 @@ void ViewGLTest::setThreaded(bool state)
 		xRotation = yRotation = zRotation = 0.f;
 		if (state == true && thread == 0)
 		{
-			thread = new ViewGLIFThread<ViewGLIF>(this);
+			thread = new ViewGLIFThread(this);
 		}
 		else if (state == false)
 		{
