@@ -27,8 +27,6 @@ class ViewGLIF : public COpenGLView
 public:
 	ViewGLIF(const CRect& size);
 
-	void killThread();
-
 	virtual void setThreaded(bool state);
 
 	void platformOpenGLViewCreated() override;
@@ -52,6 +50,11 @@ protected:
 			, openGLView(openGLView)
 			, cancelDrawLoop(false)
 		{
+			this->run();
+		}
+		~Thread() {
+			cancelDrawLoop = true;
+			this->waitDead(-1);
 		}
 
 		uint32 entry() override
@@ -62,11 +65,6 @@ protected:
 				FThreadSleep(16);
 			}
 			return 0;
-		}
-
-		void stop()
-		{
-			cancelDrawLoop = true;
 		}
 
 	protected:

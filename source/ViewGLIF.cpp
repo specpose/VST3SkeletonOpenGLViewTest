@@ -6,17 +6,6 @@ ViewGLIF::ViewGLIF(const CRect & size) : COpenGLView(size), useThread(false), th
 {
 }
 
-void ViewGLIF::killThread()
-{
-	if (thread)
-	{
-		thread->stop();
-		thread->waitDead(-1);
-		delete thread;
-		thread = 0;
-	}
-}
-
 void ViewGLIF::setThreaded(bool state)
 {
 	if (isAttached())
@@ -24,11 +13,13 @@ void ViewGLIF::setThreaded(bool state)
 		if (state == true && thread == 0)
 		{
 			thread = new Thread(this);
-			thread->run();
 		}
 		else if (state == false)
 		{
-			killThread();
+			if (thread) {
+				delete thread;
+				thread = 0;
+			}
 		}
 	}
 	useThread = state;
@@ -52,7 +43,10 @@ void ViewGLIF::platformOpenGLViewCreated()
 
 void ViewGLIF::platformOpenGLViewWillDestroy()
 {
-	killThread();
+	if (thread) {
+		delete thread;
+		thread = 0;
+	}
 }
 
 void ViewGLIF::platformOpenGLViewSizeChanged()

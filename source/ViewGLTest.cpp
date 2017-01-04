@@ -16,7 +16,10 @@ void ViewGLTest::setThreaded(bool state)
 		}
 		else if (state == false)
 		{
-			killThread();
+			if (thread) {
+				delete thread;
+				thread = 0;
+			}
 			remember();
 			addAnimation("XRotation", this, new Animation::RepeatTimingFunction(new Animation::LinearTimingFunction(4000), -1, false));
 			remember();
@@ -30,7 +33,10 @@ void ViewGLTest::setThreaded(bool state)
 
 void ViewGLTest::platformOpenGLViewWillDestroy()
 {
-	killThread();
+	if (thread) {
+		delete thread;
+		thread = 0;
+	}
 	removeAllAnimations();
 }
 
