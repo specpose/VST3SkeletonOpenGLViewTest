@@ -52,7 +52,7 @@ BEGIN_FACTORY("VSTGUI", "", "", PFactoryInfo::kUnicode)
 				"Fx",
 				"1.0.0",
 				kVstVersionString,
-				ProcessorIF::createInstance)
+				ProcessorIF::createInstance<ProcessorIF>)
 				
 	DEF_CLASS2 (INLINE_UID_FROM_FUID(ControllerGL::cid),
 				PClassInfo::kManyInstances,
