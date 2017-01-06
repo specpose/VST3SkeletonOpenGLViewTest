@@ -13,6 +13,11 @@ public:
 	Steinberg::Vst::Parameter* getParameterObject(Steinberg::Vst::ParamID tag) override;
 
 	bool isPrivateParameter(const Steinberg::Vst::ParamID paramID) override;
+
+	template<typename T> static FUnknown* createInstance(void* context) {
+		return (Steinberg::Vst::IEditController*)new T;
+	};
+
 protected:
 	Steinberg::Vst::ParameterContainer uiParameters;
 };

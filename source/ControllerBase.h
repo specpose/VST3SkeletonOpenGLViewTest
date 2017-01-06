@@ -13,9 +13,4 @@ public:
 	virtual Steinberg::tresult PLUGIN_API initialize(Steinberg::FUnknown* context) override;
 	virtual Steinberg::IPlugView* PLUGIN_API createView(Steinberg::FIDString name)=0;
 	virtual void willClose(VST3Editor* editor) =0;
-
-	template<typename T> static FUnknown* createInstance(void* context) {
-		return (Steinberg::Vst::IEditController*)new T;
-	};
-
 };
